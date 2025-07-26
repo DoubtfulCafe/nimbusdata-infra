@@ -12,7 +12,7 @@ variable "location" {
 variable "project" {
   type = string
   description = "Project name"
-  default = "dsecommerce"
+  default = "nimbusdata"
 }
 
 variable "enviroment" {
@@ -30,4 +30,10 @@ variable "tags" {
     createdBy = "Daniel Villeda"
     method = "terraform"
   }
+}
+
+variable "admin_sql_password" {
+  description = "The administrator password for the SQL server"
+  type        = string
+  sensitive   = true
 }
